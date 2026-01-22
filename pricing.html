@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - EQLIX MEDIA CREATION</title>
+    <meta name="description"
+        content="Découvrez nos tarifs et forfaits pour design graphique, photographie et impression premium. Solutions adaptées à tous les budgets.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <style>
+        .pricing-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="index.html#services" class="nav-link">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="services/identite.html" class="dropdown-item">Identité Visuelle</a>
+                            <a href="services/photo.html" class="dropdown-item">Photographie</a>
+                            <a href="services/design.html" class="dropdown-item">Design Graphique</a>
+                            <a href="services/impression.html" class="dropdown-item">Impression</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="testimonials.html" class="nav-link">Témoignages</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">Agence</a>
+                        <div class="dropdown-menu">
+                            <a href="about.html#vision" class="dropdown-item">Vision</a>
+                            <a href="about.html#equipe" class="dropdown-item">Équipe</a>
+                            <a href="about.html#equipements" class="dropdown-item">Équipements</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="btn btn-outline btn-client" onclick="openLoginModal()">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Espace Client
+                </button>
+                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
+                <button class="mobile-menu-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-small"
+        style="background-image: linear-gradient(135deg, rgba(193, 18, 89, 0.9), rgba(232, 119, 34, 0.9)), url('images/hero-3.png')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Nos Tarifs</h1>
+            <p class="hero-subtitle">Des solutions adaptées à tous les budgets et tous les besoins</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Forfaits Tout-en-Un</h2>
+            <p class="section-subtitle text-center">Choisissez le forfait qui correspond à vos besoins</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <!-- Starter Package -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="pricing-price">$2,500</div>
+                        <p class="pricing-period">Forfait de base</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Logo professionnel</li>
+                        <li>Charte graphique basique</li>
+                        <li>Carte de visite (500 ex.)</li>
+                        <li>Papier à en-tête</li>
+                        <li>2 révisions incluses</li>
+                        <li>Livraison sous 2 semaines</li>
+                    </ul>
+                    <button class="btn btn-outline btn-large" style="width: 100%;" onclick="openContactModal()">Choisir
+                        ce forfait</button>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <div class="pricing-price">$7,500</div>
+                        <p class="pricing-period">Forfait complet</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Identité visuelle complète</li>
+                        <li>Charte graphique détaillée</li>
+                        <li>Shooting photo produit (20 photos)</li>
+                        <li>Cartes de visite premium (1000 ex.)</li>
+                        <li>Brochure 8 pages</li>
+                        <li>5 révisions incluses</li>
+                        <li>Livraison sous 4 semaines</li>
+                        <li>Support prioritaire</li>
+                    </ul>
+                    <button class="btn btn-primary btn-large" style="width: 100%;" onclick="openContactModal()">Choisir
+                        ce forfait</button>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">$20,000+</div>
+                        <p class="pricing-period">Sur mesure</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Branding complet 360°</li>
+                        <li>Guide de marque exhaustif</li>
+                        <li>Shooting photo illimité</li>
+                        <li>Supports print premium illimités</li>
+                        <li>Packaging produit</li>
+                        <li>Signalétique</li>
+                        <li>Révisions illimitées</li>
+                        <li>Account manager dédié</li>
+                        <li>Support 24/7</li>
+                    </ul>
+                    <button class="btn btn-outline btn-large" style="width: 100%;" onclick="openContactModal()">Demander
+                        un devis</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services à la carte -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Services à la Carte</h2>
+            <p class="section-subtitle text-center">Composez votre propre solution</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="feature-card">
+                    <h3>Design de Logo</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$800 - $3,000
+                    </div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ 3 concepts initiaux</li>
+                        <li>✓ 3 révisions</li>
+                        <li>✓ Fichiers sources</li>
+                        <li>✓ Guide d'utilisation</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Shooting Photo</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$150/photo
+                    </div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ Shooting en studio</li>
+                        <li>✓ Retouche professionnelle</li>
+                        <li>✓ Haute résolution</li>
+                        <li>✓ Livraison 48h</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Charte Graphique</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$2,500 -
+                        $5,000</div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ Couleurs & typographies</li>
+                        <li>✓ Règles d'utilisation</li>
+                        <li>✓ Templates</li>
+                        <li>✓ Guide complet PDF</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Cartes de Visite</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$300 - $800
+                    </div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ Design personnalisé</li>
+                        <li>✓ 500-1000 exemplaires</li>
+                        <li>✓ Finitions premium</li>
+                        <li>✓ Papier noble</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Brochure</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$1,500 -
+                        $4,000</div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ Design 4-16 pages</li>
+                        <li>✓ Rédaction incluse</li>
+                        <li>✓ Impression premium</li>
+                        <li>✓ 100-500 exemplaires</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Packaging</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 1rem 0;">$3,000 -
+                        $10,000</div>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ Design structural</li>
+                        <li>✓ Design graphique</li>
+                        <li>✓ Prototype</li>
+                        <li>✓ Production</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Questions Fréquentes sur les Tarifs</h2>
+
+            <div style="max-width: 800px; margin: 3rem auto;">
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem;">Les tarifs incluent-ils les révisions ?</h3>
+                    <p style="color: var(--text-secondary);">Oui, chaque forfait inclut un nombre défini de révisions.
+                        Des révisions supplémentaires peuvent être ajoutées moyennant des frais additionnels.</p>
+                </div>
+
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem;">Proposez-vous des facilités de paiement ?</h3>
+                    <p style="color: var(--text-secondary);">Oui, nous acceptons les paiements échelonnés : 50% à la
+                        commande, 25% à la validation, 25% à la livraison.</p>
+                </div>
+
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem;">Puis-je combiner plusieurs services ?</h3>
+                    <p style="color: var(--text-secondary);">Absolument ! Nous offrons des réductions pour les projets
+                        combinant plusieurs services. Contactez-nous pour un devis personnalisé.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 1rem;">Quels sont les délais de livraison ?</h3>
+                    <p style="color: var(--text-secondary);">Les délais varient selon le forfait choisi. Nous pouvons
+                        également proposer des options express moyennant des frais supplémentaires.</p>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="faq.html" class="btn btn-outline btn-large">Voir toutes les questions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Besoin d'un Devis Personnalisé ?</h2>
+            <p class="section-subtitle">Chaque projet est unique. Parlons du vôtre !</p>
+            <div class="hero-cta" style="margin-top: 2rem;">
+                <button class="btn btn-primary btn-large" onclick="openContactModal()">Demander un devis
+                    gratuit</button>
+                <a href="contact.html" class="btn btn-outline btn-large">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/identite.html">Identité Visuelle</a></li>
+                        <li><a href="services/photo.html">Photographie</a></li>
+                        <li><a href="services/design.html">Design Graphique</a></li>
+                        <li><a href="services/impression.html">Impression Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Agence</h4>
+                    <ul>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="about.html#vision">Notre Vision</a></li>
+                        <li><a href="about.html#equipe">L'Équipe</a></li>
+                        <li><a href="about.html#equipements">Nos Équipements</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="legal/cgv.html">CGV</a></li>
+                        <li><a href="legal/confidentialite.html">Confidentialité</a></li>
+                        <li><a href="legal/cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="testimonials.html">Témoignages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>contact@eqlix.com</li>
+                        <li>+509 31 06 0634</li>
+                        <li>+509 40 05 5553</li>
+                        <li>11, Rue Chavanne Prolongée</li>
+                        <li>Diègue, PV, Haïti</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Behance">BE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-partners">
+                    <span>Partenaires:</span>
+                    <div class="partner-logos">
+                        <span class="partner">Adobe</span>
+                        <span class="partner">Pantone</span>
+                        <span class="partner">Canon</span>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contact-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Démarrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="jean@entreprise.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+509 XX XX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project-type">Type de projet *</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="design">Design Graphique</option>
+                            <option value="photo">Photographie Professionnelle</option>
+                            <option value="print">Impression Premium</option>
+                            <option value="multiple">Projet Multi-services</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="small">Moins de $5,000</option>
+                            <option value="medium">$5,000 - $15,000</option>
+                            <option value="large">$15,000 - $50,000</option>
+                            <option value="enterprise">Plus de $50,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Décrivez votre projet *</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
+                </div>
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
+                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                </div>
+            </form>
+            <div class="success-message" id="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Message envoyé avec succès !</h3>
+                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
+                <button class="btn btn-primary" id="success-close">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="modal-overlay" id="login-overlay"></div>
+        <div class="modal-content login-content">
+            <button class="modal-close" id="login-close" aria-label="Fermer">×</button>
+            <div class="modal-header">
+                <div class="login-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 class="modal-title">Espace Client</h2>
+                <p class="modal-subtitle">Connectez-vous pour accéder à vos projets</p>
+            </div>
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email *</label>
+                    <input type="email" id="login-email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mot de passe *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="login-password" name="password" required placeholder="••••••••">
+                        <button type="button" class="password-toggle" id="password-toggle"
+                            aria-label="Afficher le mot de passe">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="display: none;">
+                                <path
+                                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                                </path>
+                                <line x1="1" y1="1" x2="23" y2="23"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember-me" name="remember">
+                        <span>Se souvenir de moi</span>
+                    </label>
+                    <a href="#forgot-password" class="forgot-link">Mot de passe oublié ?</a>
+                </div>
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Se connecter</button>
+                    <p class="form-note">Pas encore de compte ? <a href="#signup" class="signup-link">Créer un
+                            compte</a></p>
+                </div>
+            </form>
+            <div class="success-message" id="login-success-message">
+                <div class="success-icon">✓</div>
+                <h3>Connexion réussie !</h3>
+                <p>Bienvenue dans votre espace client.</p>
+                <button class="btn btn-primary" id="login-success-close">Accéder au tableau de bord</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

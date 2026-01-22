@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Graphique - EQLIX MEDIA CREATION</title>
+    <meta name="description" content="Design graphique créatif pour supports digitaux et imprimés.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="service-page">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo"><a href="../index.html"><img src="../images/logo.png" alt="EQLIX MEDIA CREATION"
+                        class="logo-img"></a></div>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown"><a href="../index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item dropdown"><a href="../about.html" class="nav-link">Agence</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
+                <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1 class="section-title">Design Graphique</h1>
+            <p class="section-subtitle">Des créations visuelles qui marquent les esprits et renforcent votre identité.
+            </p>
+            <button class="btn btn-primary" onclick="openContactModal()">Lancer mon projet</button>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="service-overview">
+        <div class="container">
+            <h2>Le design au service de votre message</h2>
+            <p>Le design graphique est l'art de communiquer visuellement. Chaque élément graphique que nous créons est
+                pensé pour transmettre votre message de manière claire, impactante et mémorable.</p>
+            <p>De la conception de supports marketing aux interfaces digitales, en passant par le packaging et les
+                présentations, notre équipe de designers créatifs transforme vos idées en visuels qui captivent et
+                convertissent. Nous maîtrisons tous les outils Adobe et suivons les dernières tendances du design pour
+                vous offrir des créations modernes et intemporelles.</p>
+            <div class="highlight-box">
+                <p>🎨 Un bon design augmente la crédibilité de votre marque de 75% et améliore la compréhension de votre
+                    message.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="service-features">
+        <div class="container">
+            <h2>Nos services de design graphique</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <h3>Supports Marketing</h3>
+                    <p>Flyers, brochures, affiches et tous supports print pour promouvoir vos produits et services.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Visuels Réseaux Sociaux</h3>
+                    <p>Posts, stories, bannières et templates pour une présence digitale cohérente et impactante.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <h3>Packaging Design</h3>
+                    <p>Conception d'emballages créatifs qui attirent l'œil et valorisent vos produits.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
+                        </svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces utilisateur intuitives et expériences digitales optimisées pour vos applications.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h3>Infographies</h3>
+                    <p>Visualisation de données complexes en graphiques clairs et esthétiques.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                            <line x1="7" y1="2" x2="7" y2="22" />
+                            <line x1="17" y1="2" x2="17" y2="22" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <line x1="2" y1="7" x2="7" y2="7" />
+                            <line x1="2" y1="17" x2="7" y2="17" />
+                            <line x1="17" y1="17" x2="22" y2="17" />
+                            <line x1="17" y1="7" x2="22" y2="7" />
+                        </svg>
+                    </div>
+                    <h3>Présentations</h3>
+                    <p>Slides professionnels et percutants pour vos pitchs, conférences et réunions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="service-process">
+        <div class="container">
+            <h2>Notre processus créatif</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Brief Créatif</h3>
+                    <p>Compréhension approfondie de vos objectifs, votre cible et vos contraintes.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Recherche & Inspiration</h3>
+                    <p>Exploration des tendances, analyse de la concurrence et collecte d'inspirations.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Concepts & Maquettes</h3>
+                    <p>Création de plusieurs propositions créatives avec différentes directions visuelles.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Révisions</h3>
+                    <p>Ajustements et perfectionnement du design selon vos retours et préférences.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Fichiers Finaux</h3>
+                    <p>Livraison de tous les formats nécessaires (print, web, réseaux sociaux).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="service-why">
+        <div class="container">
+            <h2>Pourquoi choisir EQLIX ?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">💡</div>
+                    <h3>Créativité Sans Limite</h3>
+                    <p>Des designs originaux qui sortent des sentiers battus et captent l'attention.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🎯</div>
+                    <h3>Orienté Résultats</h3>
+                    <p>Chaque design est pensé pour atteindre vos objectifs business et marketing.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🚀</div>
+                    <h3>Livraison Rapide</h3>
+                    <p>Processus optimisé pour des délais courts sans compromis sur la qualité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h2>Prêt à créer des designs qui convertissent ?</h2>
+            <p>Donnez vie à vos idées avec des créations graphiques professionnelles.</p>
+            <button class="btn" onclick="openContactModal()">Lancer mon projet</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="identite.html">Identit� Visuelle</a></li>
+                        <li><a href="photo.html">Photographie</a></li>
+                        <li><a href="design.html">Design Graphique</a></li>
+                        <li><a href="impression.html">Impression Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Agence</h4>
+                    <ul>
+                        <li><a href="../about.html">� Propos</a></li>
+                        <li><a href="../about.html#vision">Notre Vision</a></li>
+                        <li><a href="../about.html#equipe">L'�quipe</a></li>
+                        <li><a href="../about.html#equipements">Nos �quipements</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>L�gal</h4>
+                    <ul>
+                        <li><a href="../legal/mentions-legales.html">Mentions L�gales</a></li>
+                        <li><a href="../legal/cgv.html">CGV</a></li>
+                        <li><a href="../legal/confidentialite.html">Confidentialit�</a></li>
+                        <li><a href="../legal/cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../pricing.html">Tarifs</a></li>
+                        <li><a href="../testimonials.html">T�moignages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>contact@eqlix.com</li>
+                        <li>+509 31 06 0634</li>
+                        <li>+509 40 05 5553</li>
+                        <li>11, Rue Chavanne Prolong�e</li>
+                        <li>Di�gue, PV, Ha�ti</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Behance">BE</a>
+                    </div>
+                </div>
+            </div>
+<div class="footer-bottom">
+                <div class="footer-partners"><span>Partenaires:</span>
+                    <div class="partner-logos"><span class="partner">Adobe</span><span
+                            class="partner">Pantone</span><span class="partner">Canon</span></div>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contact-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+
+            <div class="modal-header">
+                <h2 class="modal-title">Démarrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="jean@entreprise.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project-type">Type de projet *</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="design">Design Graphique</option>
+                            <option value="photo">Photographie Professionnelle</option>
+                            <option value="print">Impression Premium</option>
+                            <option value="multiple">Projet Multi-services</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="small">Less than $5,000</option>
+                            <option value="medium">$5,000 - $15,000</option>
+                            <option value="large">$15,000 - $50,000</option>
+                            <option value="enterprise">Over $50,000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Décrivez votre projet *</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
+                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Message envoyé avec succès !</h3>
+                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
+                <button class="btn btn-primary" id="success-close">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

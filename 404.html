@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Non Trouvée | EQLIX MEDIA CREATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(193, 18, 89, 0.05), rgba(232, 119, 34, 0.05));
+        }
+
+        .error-content {
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 10rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .error-text {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Non Trouvée</h1>
+            <p class="error-text">
+                Oups ! La page que vous recherchez semble avoir disparu. Elle a peut-être été déplacée ou n'existe plus.
+            </p>
+            <div class="error-links">
+                <a href="index.html" class="btn btn-primary btn-large">Retour à l'accueil</a>
+                <a href="contact.html" class="btn btn-outline btn-large">Contactez-nous</a>
+            </div>
+            <div style="margin-top: 3rem;">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Liens utiles :</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="portfolio.html" style="color: var(--primary); text-decoration: none;">Portfolio</a>
+                    <a href="services/identite.html" style="color: var(--primary); text-decoration: none;">Services</a>
+                    <a href="pricing.html" style="color: var(--primary); text-decoration: none;">Tarifs</a>
+                    <a href="faq.html" style="color: var(--primary); text-decoration: none;">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - EQLIX MEDIA CREATION</title>
+    <meta name="description"
+        content="Découvrez les réalisations de EQLIX MEDIA CREATION. Identité visuelle, photographie, design graphique et impression premium.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="portfolio-page">
+    <!-- Header Sticky -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Agence</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="btn btn-outline btn-client" id="client-space-btn" onclick="openLoginModal()">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Espace Client
+                </button>
+                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
+                <button class="mobile-menu-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1 class="section-title">Notre Portfolio</h1>
+            <p class="section-subtitle">Chaque projet est une nouvelle opportunité de repousser les limites de la
+                créativité et de l'excellence technique.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="photo">Photo</button>
+                <button class="filter-btn" data-filter="print">Print</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1: Luxe & Co. -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/concept.png" alt="Luxe & Co. Branding">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> Luxe & Co.<br>
+                                    <span class="context-label">Service:</span> Rebranding Complet<br>
+                                    <span class="context-label">Date:</span> Janvier 2026<br>
+                                    <p class="context-desc">Création d'une identité visuelle luxueuse pour une marque de
+                                        prêt-à-porter haut de gamme, incluant logo, typographie et charte graphique.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Luxe & Co.</h3>
+                            <span>Branding & Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: TechFlow -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/hero-1.png" alt="TechFlow Digital Experience">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> TechFlow Solutions<br>
+                                    <span class="context-label">Service:</span> UI/UX & Web Design<br>
+                                    <span class="context-label">Date:</span> Octobre 2025<br>
+                                    <p class="context-desc">Conception d'une plateforme SaaS moderne axée sur
+                                        l'expérience utilisateur et l'efficacité opérationnelle.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>TechFlow</h3>
+                            <span>Expérience Digitale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Horizon Photography -->
+                <div class="portfolio-item" data-category="photo">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/photo.png" alt="Horizon Photography">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> Horizon Lifestyle<br>
+                                    <span class="context-label">Service:</span> Photographie Produit<br>
+                                    <span class="context-label">Date:</span> Décembre 2025<br>
+                                    <p class="context-desc">Shooting photo atmosphérique pour une nouvelle gamme de
+                                        produits "Outdoor", capturant l'essence de l'aventure.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Horizon</h3>
+                            <span>Photographie Produit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Impact Print -->
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/business-cards.png" alt="Impact Print Packaging">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> Domaine Impact<br>
+                                    <span class="context-label">Service:</span> Packaging & Print<br>
+                                    <span class="context-label">Date:</span> Novembre 2025<br>
+                                    <p class="context-desc">Conception et impression premium de packaging pour une
+                                        édition limitée de spiritueux, avec finitions dorure et gaufrage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Impact Print</h3>
+                            <span>Packaging Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Creative Studio -->
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/design.png" alt="Creative Studio Identity">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> Bloom Studio<br>
+                                    <span class="context-label">Service:</span> Design Editorial<br>
+                                    <span class="context-label">Date:</span> Septembre 2025<br>
+                                    <p class="context-desc">Layout et direction artistique pour un magazine de design
+                                        contemporain, mettant l'accent sur la typographie et les espaces vides.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Bloom Studio</h3>
+                            <span>Design Graphique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Premium Materials -->
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/print.png" alt="Premium Materials Showcase">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-context">
+                                    <span class="context-label">Client:</span> EQLIX Showcase<br>
+                                    <span class="context-label">Service:</span> Print & Materials<br>
+                                    <span class="context-label">Date:</span> Janvier 2026<br>
+                                    <p class="context-desc">Exhibition de différents papiers et techniques d'impression
+                                        haut de gamme pour démontrer notre savoir-faire technique.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Matières Premières</h3>
+                            <span>Print & Finition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/identite.html">Identité Visuelle</a></li>
+                        <li><a href="services/photo.html">Photographie</a></li>
+                        <li><a href="services/design.html">Design Graphique</a></li>
+                        <li><a href="services/impression.html">Impression Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Agence</h4>
+                    <ul>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="about.html#vision">Notre Vision</a></li>
+                        <li><a href="about.html#equipe">L'Équipe</a></li>
+                        <li><a href="about.html#equipements">Nos Équipements</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="legal/cgv.html">CGV</a></li>
+                        <li><a href="legal/confidentialite.html">Confidentialité</a></li>
+                        <li><a href="legal/cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="testimonials.html">Témoignages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>contact@eqlix.com</li>
+                        <li>+509 31 06 0634</li>
+                        <li>+509 40 05 5553</li>
+                        <li>11, Rue Chavanne Prolongée</li>
+                        <li>Diègue, PV, Haïti</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Behance">BE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-partners">
+                    <span>Partenaires:</span>
+                    <div class="partner-logos">
+                        <span class="partner">Adobe</span>
+                        <span class="partner">Pantone</span>
+                        <span class="partner">Canon</span>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contact-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+
+            <div class="modal-header">
+                <h2 class="modal-title">Démarrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="jean@entreprise.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project-type">Type de projet *</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="design">Design Graphique</option>
+                            <option value="photo">Photographie Professionnelle</option>
+                            <option value="print">Impression Premium</option>
+                            <option value="multiple">Projet Multi-services</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="small">Less than $5,000</option>
+                            <option value="medium">$5,000 - $15,000</option>
+                            <option value="large">$15,000 - $50,000</option>
+                            <option value="enterprise">Over $50,000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Décrivez votre projet *</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
+                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Message envoyé avec succès !</h3>
+                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
+                <button class="btn btn-primary" id="success-close">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
