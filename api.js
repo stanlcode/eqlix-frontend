@@ -79,6 +79,23 @@ const API = {
             });
             return response.json();
         },
+
+        me: async () => {
+            const response = await fetch(`${API_BASE_URL}/auth/me`, {
+                method: 'GET',
+                headers: getHeaders(true),
+            });
+            return response.json();
+        },
+
+        changePassword: async (passwordData) => {
+            const response = await fetch(`${API_BASE_URL}/auth/change-password`, {
+                method: 'POST',
+                headers: getHeaders(true),
+                body: JSON.stringify(passwordData),
+            });
+            return response.json();
+        },
     },
 
     // Contact
@@ -119,6 +136,26 @@ const API = {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
                 },
                 body: formData,
+            });
+            return response.json();
+        },
+    },
+
+    // Users
+    users: {
+        updateProfile: async (userData) => {
+            const response = await fetch(`${API_BASE_URL}/users/me`, {
+                method: 'PUT',
+                headers: getHeaders(true),
+                body: JSON.stringify(userData),
+            });
+            return response.json();
+        },
+
+        getProfile: async () => {
+            const response = await fetch(`${API_BASE_URL}/users/me`, {
+                method: 'GET',
+                headers: getHeaders(true),
             });
             return response.json();
         },

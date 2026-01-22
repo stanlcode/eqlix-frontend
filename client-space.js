@@ -28,18 +28,42 @@ if (clientPasswordToggle && clientPasswordInput) {
 const clientLoginForm = document.getElementById('client-login-form');
 
 if (clientLoginForm) {
-    clientLoginForm.addEventListener('submit', (e) => {
+    clientLoginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(clientLoginForm);
-        const data = Object.fromEntries(formData);
-        console.log('Client login submitted:', data);
+        const data = {
+            email: formData.get('email'),
+            password: formData.get('password')
+        };
 
-        // Simulate login process
-        // In production, this would make an API call
-        setTimeout(() => {
-            alert('Connexion réussie ! Redirection vers le tableau de bord...');
-            window.location.href = 'dashboard.html';
-        }, 1000);
+        // Disable submit button
+        const submitBtn = clientLoginForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Connexion...';
+
+        try {
+            // Call login API
+            const response = await API.auth.login(data);
+
+            if (response.success) {
+                // Check if there's a redirect URL
+                const redirectUrl = sessionStorage.getItem('redirectAfterLogin') || 'dashboard.html';
+                sessionStorage.removeItem('redirectAfterLogin');
+
+                // Redirect to dashboard or saved page
+                window.location.href = redirectUrl;
+            } else {
+                alert(response.error?.message || 'Email ou mot de passe incorrect.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('Erreur de connexion. Veuillez réessayer.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
     });
 }
 
