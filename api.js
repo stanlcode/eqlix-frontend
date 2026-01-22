@@ -6,7 +6,7 @@
 // Auto-detect environment: use localhost for development, production URL for deployed site
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000/api'
-    : 'https://eqlix-backend.onrender.com/api'; // Update this URL after backend deployment
+    : 'https://eqlix-backend.onrender.com/api';
 
 // Configuration des headers
 const getHeaders = (includeAuth = false) => {
