@@ -436,19 +436,41 @@
         </div>
     </div>
 
+    <script src="api.js"></script>
     <script src="script.js"></script>
     <script>
-        // Handle contact form submission
+        // Handle contact form submission on contact page
         const contactFormPage = document.getElementById('contact-form-page');
         if (contactFormPage) {
-            contactFormPage.addEventListener('submit', (e) => {
+            contactFormPage.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const formData = new FormData(contactFormPage);
-                const data = Object.fromEntries(formData);
-                console.log('Contact form submitted:', data);
+                const rawData = Object.fromEntries(formData);
 
-                alert('Message envoyé avec succès ! Nous vous répondrons sous 24h.');
-                contactFormPage.reset();
+                // Transform to match backend expectations
+                const data = {
+                    name: rawData.name,
+                    email: rawData.email,
+                    phone: rawData.phone || '',
+                    company: '',
+                    projectType: rawData.subject || 'info',
+                    budget: '',
+                    message: rawData.message
+                };
+
+                try {
+                    const response = await API.contact.submit(data);
+
+                    if (response.success) {
+                        alert('Message envoyé avec succès ! Nous vous répondrons sous 24h.');
+                        contactFormPage.reset();
+                    } else {
+                        alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+                    }
+                } catch (error) {
+                    console.error('Error submitting contact form:', error);
+                    alert('Erreur de connexion. Veuillez réessayer.');
+                }
             });
         }
     </script>
