@@ -345,7 +345,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Handle form submission
+// Handle contact modal form submission
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -376,6 +376,44 @@ if (contactForm) {
         } catch (error) {
             console.error('Error submitting contact form:', error);
             alert('Erreur de connexion. Veuillez réessayer.');
+        }
+    });
+}
+
+// Handle static contact page form submission
+const contactFormPage = document.getElementById('contact-form-page');
+if (contactFormPage) {
+    contactFormPage.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactFormPage);
+        const rawData = Object.fromEntries(formData);
+
+        // Map fields for the static form (which might have slightly different IDs/names or need specific mapping)
+        const data = {
+            name: rawData.name,
+            email: rawData.email,
+            phone: rawData.phone,
+            company: rawData.company || '', // Static form might not have company field, check HTML if needed
+            projectType: rawData.subject || 'other', // Map 'subject' to 'projectType' or keep as is if backend supports it
+            budget: '', // Static form might not have budget
+            message: rawData.message
+        };
+
+        // Note: Check backend expectations. If backend expects strict 'projectType' enum, 'subject' values need mapping.
+        // Assuming backend handles basic contact fields.
+
+        try {
+            const response = await API.contact.submit(data);
+            // Create a simple success alert or modify DOM for static page
+            if (response.success) {
+                contactFormPage.reset();
+                alert('Message envoyé avec succès ! Nous vous répondrons bientôt.');
+            } else {
+                alert('Erreur: ' + (response.error?.message || 'Une erreur est survenue.'));
+            }
+        } catch (error) {
+            console.error('Error submitting static contact form:', error);
+            alert('Erreur de connexion.');
         }
     });
 }
@@ -513,23 +551,30 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Password toggle functionality
-if (passwordToggle && passwordInput) {
-    passwordToggle.addEventListener('click', () => {
-        const eyeIcon = passwordToggle.querySelector('.eye-icon');
-        const eyeOffIcon = passwordToggle.querySelector('.eye-off-icon');
+// Password toggle functionality (Global Delegation)
+document.addEventListener('click', function (e) {
+    const toggleBtn = e.target.closest('.password-toggle');
+    if (toggleBtn) {
+        // Find the input relative to the button (sibling or in same wrapper)
+        const wrapper = toggleBtn.closest('.password-input-wrapper') || toggleBtn.parentElement;
+        const input = wrapper.querySelector('input');
 
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            if (eyeIcon) eyeIcon.style.display = 'none';
-            if (eyeOffIcon) eyeOffIcon.style.display = 'block';
-        } else {
-            passwordInput.type = 'password';
-            if (eyeIcon) eyeIcon.style.display = 'block';
-            if (eyeOffIcon) eyeOffIcon.style.display = 'none';
+        if (input) {
+            const eyeIcon = toggleBtn.querySelector('.eye-icon');
+            const eyeOffIcon = toggleBtn.querySelector('.eye-off-icon');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                if (eyeIcon) eyeIcon.style.display = 'none';
+                if (eyeOffIcon) eyeOffIcon.style.display = 'block';
+            } else {
+                input.type = 'password';
+                if (eyeIcon) eyeIcon.style.display = 'block';
+                if (eyeOffIcon) eyeOffIcon.style.display = 'none';
+            }
         }
-    });
-}
+    }
+});
 
 // Handle login form submission
 if (loginForm) {
@@ -545,6 +590,16 @@ if (loginForm) {
             if (response.success) {
                 loginForm.classList.add('hidden');
                 if (loginSuccessMessage) loginSuccessMessage.classList.add('active');
+
+                // Automatic redirect
+                // Check if we are in a subdirectory
+                const path = window.location.pathname;
+                const isSubPage = path.includes('/services/') || path.includes('/legal/');
+                const dashboardPath = isSubPage ? '../dashboard.html' : 'dashboard.html';
+
+                setTimeout(() => {
+                    window.location.href = dashboardPath;
+                }, 1500);
             } else {
                 alert(response.error?.message || 'Erreur de connexion. Vérifiez vos identifiants.');
             }
@@ -558,8 +613,393 @@ if (loginForm) {
 // Handle login success button - redirect to dashboard
 if (loginSuccessClose) {
     loginSuccessClose.addEventListener('click', () => {
-        window.location.href = 'dashboard.html';
+        const path = window.location.pathname;
+        const isSubPage = path.includes('/services/') || path.includes('/legal/');
+        const dashboardPath = isSubPage ? '../dashboard.html' : 'dashboard.html';
+        window.location.href = dashboardPath;
+    });
+}
+
+// ===== REGISTER FORM =====
+const registerForm = document.getElementById('register-form');
+const registerSuccess = document.getElementById('register-success');
+const registerPasswordToggle = document.getElementById('password-toggle');
+const registerConfirmPasswordToggle = document.getElementById('confirm-password-toggle');
+const registerPasswordInput = document.getElementById('password');
+const registerConfirmPasswordInput = document.getElementById('confirmPassword');
+
+// Register Password Toggle
+if (registerPasswordToggle && registerPasswordInput) {
+    registerPasswordToggle.addEventListener('click', () => {
+        const eyeIcon = registerPasswordToggle.querySelector('.eye-icon');
+        const eyeOffIcon = registerPasswordToggle.querySelector('.eye-off-icon');
+
+        if (registerPasswordInput.type === 'password') {
+            registerPasswordInput.type = 'text';
+            if (eyeIcon) eyeIcon.style.display = 'none';
+            if (eyeOffIcon) eyeOffIcon.style.display = 'block';
+        } else {
+            registerPasswordInput.type = 'password';
+            if (eyeIcon) eyeIcon.style.display = 'block';
+            if (eyeOffIcon) eyeOffIcon.style.display = 'none';
+        }
+    });
+}
+
+// Register Confirm Password Toggle
+if (registerConfirmPasswordToggle && registerConfirmPasswordInput) {
+    registerConfirmPasswordToggle.addEventListener('click', () => {
+        const eyeIcon = registerConfirmPasswordToggle.querySelector('.eye-icon');
+        const eyeOffIcon = registerConfirmPasswordToggle.querySelector('.eye-off-icon');
+
+        if (registerConfirmPasswordInput.type === 'password') {
+            registerConfirmPasswordInput.type = 'text';
+            if (eyeIcon) eyeIcon.style.display = 'none';
+            if (eyeOffIcon) eyeOffIcon.style.display = 'block';
+        } else {
+            registerConfirmPasswordInput.type = 'password';
+            if (eyeIcon) eyeIcon.style.display = 'block';
+            if (eyeOffIcon) eyeOffIcon.style.display = 'none';
+        }
+    });
+}
+
+// Handle Register Submit
+if (registerForm) {
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(registerForm);
+        const data = Object.fromEntries(formData);
+
+        // Validation
+        if (data.password !== data.confirmPassword) {
+            alert('Les mots de passe ne correspondent pas.');
+            return;
+        }
+
+        try {
+            const userData = {
+                firstName: data.firstName,
+                lastName: data.lastName,
+                email: data.email,
+                phone: data.phone,
+                company: data.company,
+                password: data.password
+            };
+
+            const response = await API.auth.register(userData);
+
+            if (response.success) {
+                registerForm.style.display = 'none';
+                if (registerSuccess) {
+                    registerSuccess.style.display = 'block';
+                    registerSuccess.classList.add('active');
+                }
+
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'client-space.html';
+                }, 2000);
+            } else {
+                alert(response.error?.message || 'Erreur lors de l\'inscription. Veuillez réessayer.');
+            }
+        } catch (error) {
+            console.error('Registration Error:', error);
+            alert('Erreur de connexion. Veuillez réessayer.');
+        }
+    });
+}
+
+
+
+// ===== FORGOT PASSWORD FORM =====
+const forgotPasswordForm = document.getElementById('forgot-password-form');
+
+if (forgotPasswordForm) {
+    forgotPasswordForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(forgotPasswordForm);
+        const email = formData.get('email');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        try {
+            const response = await API.auth.forgotPassword(email);
+
+            // Note: For security, we often show success even if email doesn't exist.
+            // But if API returns strict success/fail:
+            if (response.success) {
+                forgotPasswordForm.style.display = 'none';
+                if (successMessage) successMessage.style.display = 'block';
+                if (errorMessage) errorMessage.style.display = 'none';
+            } else {
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                    document.getElementById('error-text').textContent = response.error?.message || 'Erreur inconnue.';
+                    forgotPasswordForm.style.display = 'none';
+                } else {
+                    alert('Erreur: ' + (response.error?.message || 'Veuillez réessayer.'));
+                }
+            }
+        } catch (error) {
+            console.error('Forgot Password Error:', error);
+            alert('Erreur de connexion.');
+        }
+    });
+}
+
+// ===== RESET PASSWORD FORM =====
+const resetPasswordForm = document.getElementById('reset-password-form');
+
+if (resetPasswordForm) {
+    // Get token from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token'); // e.g. reset-password.html?token=XYZ
+    // Also support path-based if using history API? Assuming query param for static file.
+
+    if (!token) {
+        // Show invalid token message immediately if no token
+        const invalidTokenMsg = document.getElementById('invalid-token-message');
+        if (invalidTokenMsg) {
+            invalidTokenMsg.style.display = 'block';
+            resetPasswordForm.style.display = 'none';
+        }
+    }
+
+    resetPasswordForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(resetPasswordForm);
+        const password = formData.get('password');
+        const confirmPassword = formData.get('confirm-password');
+
+        if (password !== confirmPassword) {
+            alert('Les mots de passe ne correspondent pas.');
+            return;
+        }
+
+        try {
+            const response = await API.auth.resetPassword(token, password);
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+
+            if (response.success) {
+                resetPasswordForm.style.display = 'none';
+                if (successMessage) successMessage.style.display = 'block';
+            } else {
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                    document.getElementById('error-text').textContent = response.error?.message || 'Le lien a expiré ou est invalide.';
+                    resetPasswordForm.style.display = 'none';
+                } else {
+                    alert('Erreur: ' + (response.error?.message || 'Erreur.'));
+                }
+            }
+        } catch (error) {
+            console.error('Reset Password Error:', error);
+            alert('Erreur de connexion.');
+        }
+    });
+}
+
+// ===== VERIFY EMAIL PAGE =====
+if (window.location.pathname.includes('verify-email.html')) {
+    document.addEventListener('DOMContentLoaded', async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        const loadingMessage = document.getElementById('loading-message');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+
+        if (!token) {
+            if (loadingMessage) loadingMessage.style.display = 'none';
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+                if (errorText) errorText.textContent = 'Lien de vérification manquant.';
+            }
+            return;
+        }
+
+        try {
+            const response = await API.auth.verifyEmail(token);
+
+            if (loadingMessage) loadingMessage.style.display = 'none';
+
+            if (response.success) {
+                if (successMessage) successMessage.style.display = 'block';
+            } else {
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                    if (errorText) errorText.textContent = response.error?.message || 'Lien invalide ou expiré.';
+                }
+            }
+        } catch (error) {
+            if (loadingMessage) loadingMessage.style.display = 'none';
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+                if (errorText) errorText.textContent = 'Erreur de connexion.';
+            }
+        }
     });
 }
 
 console.log('EQLIX MEDIA CREATION - Website loaded successfully! 🚀');
+
+// ===== STATS COUNTER ANIMATION =====
+// ===== STATS COUNTER ANIMATION =====
+function initStatsCounter() {
+    const stats = document.querySelectorAll('.stat-number');
+    if (!stats.length) return;
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.getAttribute('data-suffix') || ''; // Get suffix or empty string
+
+                if (isNaN(target)) return; // Safety check
+
+                const duration = 2000; // 2 seconds
+                const stepTime = 20;
+                const steps = duration / stepTime;
+                const increment = target / steps;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + suffix; // Add suffix at end
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.ceil(current) + suffix; // Add suffix during animation
+                    }
+                }, stepTime);
+
+                observer.unobserve(counter);
+            }
+        });
+    }, observerOptions);
+
+    stats.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+}
+
+// ===== AUTH STATE HEADER =====
+function checkAuthAndRenderHeader() {
+    const isAuth = API.user.isAuthenticated();
+    const user = API.user.getCurrentUser();
+    const headerActions = document.querySelector('.header-actions');
+    const clientBtn = document.getElementById('client-space-btn');
+
+    if (isAuth && user && headerActions) {
+        // Remove client button if it exists
+        if (clientBtn) clientBtn.remove();
+
+        // Check if user menu already exists (avoid duplication)
+        if (document.getElementById('user-menu-btn')) return;
+
+        // Create User Menu HTML
+        const userMenuHTML = `
+            <div class="user-menu" id="user-menu">
+                <div class="user-menu-btn" id="user-menu-btn">
+                    <div class="user-avatar">${user.firstName ? user.firstName[0] : 'U'}${user.lastName ? user.lastName[0] : ''}</div>
+                    <span class="user-name">${user.firstName} ${user.lastName}</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="user-dropdown">
+                    <a href="dashboard.html" class="dropdown-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a href="profile.html" class="dropdown-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Mon Profil
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item logout" id="header-logout">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        D&eacute;connexion
+                    </a>
+                </div>
+            </div>
+        `;
+
+        // Insert before the LAST element (which is usually mobile toggle)
+        // Or replace the position where client button was. 
+        // Best strategy: Insert before mobile toggle if exists, or append.
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileToggle) {
+            mobileToggle.insertAdjacentHTML('beforebegin', userMenuHTML);
+        } else {
+            headerActions.insertAdjacentHTML('beforeend', userMenuHTML);
+        }
+
+        // Initialize User Menu Events
+        initHeaderUserMenu();
+    }
+}
+
+function initHeaderUserMenu() {
+    const userMenuBtn = document.getElementById('user-menu-btn');
+    const userMenu = document.getElementById('user-menu');
+    const logoutBtn = document.getElementById('header-logout');
+
+    if (userMenuBtn && userMenu) {
+        userMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!userMenu.contains(e.target)) {
+                userMenu.classList.remove('active');
+            }
+        });
+    }
+
+    // Global Logout Handler (Event Delegation)
+    document.addEventListener('click', async (e) => {
+        const logoutTrigger = e.target.closest('#header-logout') || e.target.closest('.dropdown-item.logout');
+
+        if (logoutTrigger) {
+            e.preventDefault();
+            if (confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
+                try {
+                    console.log('Logging out...');
+                    await API.auth.logout();
+                } catch (error) {
+                    console.error('Logout error:', error);
+                } finally {
+                    // Force redirect always
+                    window.location.href = 'index.html';
+                }
+            }
+        }
+    });
+}
+
+// Add to global init
+document.addEventListener('DOMContentLoaded', () => {
+    initStatsCounter();
+    checkAuthAndRenderHeader();
+});
+

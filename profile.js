@@ -7,6 +7,12 @@ let currentUser = null;
 
 // ===== LOAD USER PROFILE =====
 async function loadUserProfile() {
+    // Check Auth
+    if (!window.API || !window.API.user.isAuthenticated()) {
+        window.location.href = 'index.html';
+        return;
+    }
+
     try {
         // Try to get user from localStorage first
         const userStr = localStorage.getItem('user');

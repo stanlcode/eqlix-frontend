@@ -1,0 +1,11 @@
+Total errors found: 10
+ - [backend/node_modules/png-js/index.html] Missing <title>
+ - [backend/node_modules/png-js/index.html] Missing meta description
+ - [backend/node_modules/png-js/examples/browser.html] Missing <title>
+ - [backend/node_modules/png-js/examples/browser.html] Missing meta description
+ - [backend/node_modules/sprintf-js/demo/angular.html] Missing <title>
+ - [backend/node_modules/sprintf-js/demo/angular.html] Missing meta description
+ - [backend/node_modules/tslib/tslib.es6.html] Missing <title>
+ - [backend/node_modules/tslib/tslib.es6.html] Missing meta description
+ - [backend/node_modules/tslib/tslib.html] Missing <title>
+ - [backend/node_modules/tslib/tslib.html] Missing meta description

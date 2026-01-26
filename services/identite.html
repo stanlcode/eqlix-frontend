@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identité Visuelle - EQLIX MEDIA CREATION</title>
-    <meta name="description" content="Création d'identité visuelle premium pour votre marque.">
+    <title>Identit&eacute; Visuelle - EQLIX MEDIA CREATION</title>
+    <meta name="description" content="Cr&eacute;ation d'identit&eacute; visuelle premium pour votre marque.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body class="service-page">
-    <!-- Header -->
-    <header class="header" id="header">
+
+    <!-- Header Sticky -->
+<header class="header" id="header">
         <div class="container header-content">
-            <div class="logo"><a href="../index.html"><img src="../images/logo.png" alt="EQLIX MEDIA CREATION"
-                        class="logo-img"></a></div>
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img"></a>
+            </div>
+
             <nav class="nav" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item dropdown"><a href="../index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../index.html#services" class="nav-link">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="../services/identite.html" class="dropdown-item">Identit&eacute; Visuelle</a>
+                            <a href="../services/photo.html" class="dropdown-item">Photographie</a>
+                            <a href="../services/design.html" class="dropdown-item">Design Graphique</a>
+                            <a href="../services/impression.html" class="dropdown-item">Impression</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item dropdown"><a href="../about.html" class="nav-link">Agence</a></li>
+                    <li class="nav-item"><a href="../testimonials.html" class="nav-link">T&eacute;moignages</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../about.html" class="nav-link">Agence</a>
+                        <div class="dropdown-menu">
+                            <a href="../about.html" class="dropdown-item">&Agrave; Propos</a>
+                            <a href="../about.html#vision" class="dropdown-item">Vision</a>
+                            <a href="../about.html#equipe" class="dropdown-item">&Eacute;quipe</a>
+                            <a href="../about.html#equipements" class="dropdown-item">&Eacute;quipements</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
+
             <div class="header-actions">
                 <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -43,42 +62,53 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
-                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
-                <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+                <button class="btn btn-outline btn-client" id="client-space-btn" onclick="openLoginModal()">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Espace Client
+                </button>
+                <button class="btn btn-primary" onclick="openContactModal()">D&eacute;marrer un projet</button>
+                <button class="mobile-menu-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
+<!-- Header -->
+    
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="container">
-            <h1 class="section-title">Identité Visuelle</h1>
-            <p class="section-subtitle">Construisez une identité de marque mémorable et cohérente qui résonne avec votre
+            <h1 class="section-title">Identit&eacute; Visuelle</h1>
+            <p class="section-subtitle">Construisez une identit&eacute; de marque m&eacute;morable et coh&eacute;rente qui r&eacute;sonne avec votre
                 audience.</p>
             <button class="btn btn-primary" onclick="openContactModal()">Commencer mon projet</button>
         </div>
     </section>
-
     <!-- Overview Section -->
     <section class="service-overview">
         <div class="container">
-            <h2>Créez une marque qui marque les esprits</h2>
-            <p>Votre identité visuelle est bien plus qu'un logo. C'est l'essence même de votre marque, la première
+            <h2>Cr&eacute;ez une marque qui marque les esprits</h2>
+            <p>Votre identit&eacute; visuelle est bien plus qu'un logo. C'est l'essence m&ecirc;me de votre marque, la premi&egrave;re
                 impression que vous laissez, et le fil conducteur de toutes vos communications.</p>
-            <p>Chez EQLIX, nous travaillons en étroite collaboration avec vous pour définir votre positionnement unique,
-                créer un logo distinctif, choisir une palette de couleurs harmonieuse, et établir une charte graphique
-                complète qui guidera votre marque vers le succès.</p>
+            <p>Chez EQLIX, nous travaillons en &eacute;troite collaboration avec vous pour d&eacute;finir votre positionnement unique,
+                cr&eacute;er un logo distinctif, choisir une palette de couleurs harmonieuse, et &eacute;tablir une charte graphique
+                compl&egrave;te qui guidera votre marque vers le succ&egrave;s.</p>
             <div class="highlight-box">
-                <p>💡 Une identité visuelle forte augmente la reconnaissance de marque de 80% et renforce la confiance
+                <p>💡 Une identit&eacute; visuelle forte augmente la reconnaissance de marque de 80% et renforce la confiance
                     des clients.</p>
             </div>
         </div>
     </section>
-
     <!-- Features Section -->
     <section class="service-features">
         <div class="container">
-            <h2>Nos prestations en identité visuelle</h2>
+            <h2>Nos prestations en identit&eacute; visuelle</h2>
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">
@@ -87,11 +117,10 @@
                             <path d="M12 6v6l4 2" />
                         </svg>
                     </div>
-                    <h3>Création de Logo</h3>
-                    <p>Design de logos uniques et mémorables qui capturent l'essence de votre marque avec plusieurs
+                    <h3>Cr&eacute;ation de Logo</h3>
+                    <p>Design de logos uniques et m&eacute;morables qui capturent l'essence de votre marque avec plusieurs
                         variations et formats.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -100,10 +129,9 @@
                         </svg>
                     </div>
                     <h3>Palette de Couleurs</h3>
-                    <p>Sélection stratégique de couleurs qui évoquent les bonnes émotions et renforcent votre message de
+                    <p>S&eacute;lection strat&eacute;gique de couleurs qui &eacute;voquent les bonnes &eacute;motions et renforcent votre message de
                         marque.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -111,10 +139,9 @@
                         </svg>
                     </div>
                     <h3>Typographie</h3>
-                    <p>Choix de polices qui reflètent la personnalité de votre marque et assurent une excellente
-                        lisibilité.</p>
+                    <p>Choix de polices qui refl&egrave;tent la personnalit&eacute; de votre marque et assurent une excellente
+                        lisibilit&eacute;.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -123,10 +150,9 @@
                         </svg>
                     </div>
                     <h3>Charte Graphique</h3>
-                    <p>Guide complet d'utilisation de votre identité visuelle pour garantir la cohérence sur tous les
+                    <p>Guide complet d'utilisation de votre identit&eacute; visuelle pour garantir la coh&eacute;rence sur tous les
                         supports.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -137,7 +163,6 @@
                     <h3>Cartes de Visite</h3>
                     <p>Design de cartes de visite professionnelles qui laissent une impression durable.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -145,43 +170,38 @@
                                 d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                         </svg>
                     </div>
-                    <h3>Papeterie Complète</h3>
-                    <p>En-têtes, enveloppes, et tous les éléments de papeterie pour une image professionnelle cohérente.
+                    <h3>Papeterie Compl&egrave;te</h3>
+                    <p>En-t&ecirc;tes, enveloppes, et tous les &eacute;l&eacute;ments de papeterie pour une image professionnelle coh&eacute;rente.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Process Section -->
     <section class="service-process">
         <div class="container">
-            <h2>Notre processus de création</h2>
+            <h2>Notre processus de cr&eacute;ation</h2>
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Découverte</h3>
+                    <h3>D&eacute;couverte</h3>
                     <p>Analyse approfondie de votre marque, vos valeurs, votre audience et vos objectifs.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Recherche</h3>
-                    <p>Étude de marché, analyse de la concurrence et exploration des tendances du secteur.</p>
+                    <p>&Eacute;tude de march&eacute;, analyse de la concurrence et exploration des tendances du secteur.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Concepts</h3>
-                    <p>Développement de plusieurs pistes créatives avec différentes directions visuelles.</p>
+                    <p>D&eacute;veloppement de plusieurs pistes cr&eacute;atives avec diff&eacute;rentes directions visuelles.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Raffinement</h3>
-                    <p>Itérations et ajustements basés sur vos retours pour perfectionner le design.</p>
+                    <p>It&eacute;rations et ajustements bas&eacute;s sur vos retours pour perfectionner le design.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">5</div>
                     <h3>Livraison</h3>
@@ -190,7 +210,6 @@
             </div>
         </div>
     </section>
-
     <!-- Why Choose Us Section -->
     <section class="service-why">
         <div class="container">
@@ -198,31 +217,28 @@
             <div class="why-grid">
                 <div class="why-item">
                     <div class="why-icon">🎨</div>
-                    <h3>Créativité Premium</h3>
-                    <p>Des designs uniques qui se démarquent et captivent votre audience cible.</p>
+                    <h3>Cr&eacute;ativit&eacute; Premium</h3>
+                    <p>Des designs uniques qui se d&eacute;marquent et captivent votre audience cible.</p>
                 </div>
-
                 <div class="why-item">
                     <div class="why-icon">⚡</div>
                     <h3>Processus Efficace</h3>
-                    <p>Livraison rapide sans compromis sur la qualité, avec des délais respectés.</p>
+                    <p>Livraison rapide sans compromis sur la qualit&eacute;, avec des d&eacute;lais respect&eacute;s.</p>
                 </div>
-
                 <div class="why-item">
                     <div class="why-icon">🤝</div>
-                    <h3>Collaboration Étroite</h3>
-                    <p>Vous êtes impliqué à chaque étape pour garantir un résultat qui vous ressemble.</p>
+                    <h3>Collaboration &Eacute;troite</h3>
+                    <p>Vous &ecirc;tes impliqu&eacute; &agrave; chaque &eacute;tape pour garantir un r&eacute;sultat qui vous ressemble.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="service-cta">
         <div class="container">
-            <h2>Prêt à créer votre identité visuelle ?</h2>
-            <p>Transformons votre vision en une marque puissante et mémorable.</p>
-            <button class="btn" onclick="openContactModal()">Démarrer mon projet</button>
+            <h2>Pr&ecirc;t &agrave; cr&eacute;er votre identit&eacute; visuelle ?</h2>
+            <p>Transformons votre vision en une marque puissante et m&eacute;morable.</p>
+            <button class="btn" onclick="openContactModal()">D&eacute;marrer mon projet</button>
         </div>
     </section>
 
@@ -232,30 +248,30 @@
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="identite.html">Identité Visuelle</a></li>
-                        <li><a href="photo.html">Photographie</a></li>
-                        <li><a href="design.html">Design Graphique</a></li>
-                        <li><a href="impression.html">Impression Premium</a></li>
+                        <li><a href="../services/identite.html">Identit&eacute; Visuelle</a></li>
+                        <li><a href="../services/photo.html">Photographie</a></li>
+                        <li><a href="../services/design.html">Design Graphique</a></li>
+                        <li><a href="../services/impression.html">Impression Premium</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h4>Agence</h4>
                     <ul>
-                        <li><a href="../about.html">À Propos</a></li>
+                        <li><a href="../about.html">&Agrave; Propos</a></li>
                         <li><a href="../about.html#vision">Notre Vision</a></li>
-                        <li><a href="../about.html#equipe">L'Équipe</a></li>
-                        <li><a href="../about.html#equipements">Nos Équipements</a></li>
+                        <li><a href="../about.html#equipe">L'&Eacute;quipe</a></li>
+                        <li><a href="../about.html#equipements">Nos &Eacute;quipements</a></li>
                         <li><a href="../portfolio.html">Portfolio</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Légal</h4>
+                    <h4>L&eacute;gal</h4>
                     <ul>
-                        <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="../legal/mentions-legales.html">Mentions L&eacute;gales</a></li>
                         <li><a href="../legal/cgv.html">CGV</a></li>
-                        <li><a href="../legal/confidentialite.html">Confidentialité</a></li>
+                        <li><a href="../legal/confidentialite.html">Confidentialit&eacute;</a></li>
                         <li><a href="../legal/cookies.html">Cookies</a></li>
                     </ul>
                 </div>
@@ -266,7 +282,7 @@
                         <li><a href="../faq.html">FAQ</a></li>
                         <li><a href="../contact.html">Contact</a></li>
                         <li><a href="../pricing.html">Tarifs</a></li>
-                        <li><a href="../testimonials.html">Témoignages</a></li>
+                        <li><a href="../testimonials.html">T&eacute;moignages</a></li>
                     </ul>
                 </div>
 
@@ -276,24 +292,30 @@
                         <li>contact@eqlix.com</li>
                         <li>+509 31 06 0634</li>
                         <li>+509 40 05 5553</li>
-                        <li>11, Rue Chavanne Prolongée</li>
-                        <li>Diègue, PV, Haïti</li>
+                        <li>11, Rue Chavanne Prolong&eacute;e</li>
+                        <li>Di&egrave;gue, PV, Ha&iuml;ti</li>
                     </ul>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Behance">BE</a>
+                        <a href="https://instagram.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+                        <a href="https://linkedin.com/company/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+                        <a href="https://facebook.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
+                        <a href="https://twitter.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+                        <a href="https://behance.net/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Behance">BE</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div class="footer-partners"><span>Partenaires:</span>
-                    <div class="partner-logos"><span class="partner">Adobe</span><span
-                            class="partner">Pantone</span><span class="partner">Canon</span></div>
+                <div class="footer-partners">
+                    <span>Partenaires:</span>
+                    <div class="partner-logos">
+                        <span class="partner">Adobe</span>
+                        <span class="partner">Pantone</span>
+                        <span class="partner">Canon</span>
+                    </div>
                 </div>
                 <div class="footer-copy">
-                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits r&eacute;serv&eacute;s.</p>
                 </div>
             </div>
         </div>
@@ -301,13 +323,13 @@
 
     <!-- Contact Modal -->
     <div class="contact-modal" id="contact-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-overlay" id="modal-overlay" onclick="closeContactModal()"></div>
         <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+            <button class="modal-close" id="modal-close" onclick="closeContactModal()" aria-label="Fermer">&times;</button>
 
             <div class="modal-header">
-                <h2 class="modal-title">Démarrons votre projet</h2>
-                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+                <h2 class="modal-title">D&eacute;marrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en r&eacute;alit&eacute;</p>
             </div>
 
             <form class="contact-form" id="contact-form">
@@ -325,8 +347,8 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                        <label for="phone">T&eacute;l&eacute;phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+509 31 06 06 34">
                     </div>
 
                     <div class="form-group">
@@ -339,8 +361,8 @@
                     <div class="form-group">
                         <label for="project-type">Type de projet *</label>
                         <select id="project-type" name="project-type" required>
-                            <option value="">Sélectionnez un type</option>
-                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="">S&eacute;lectionnez un type</option>
+                            <option value="branding">Identit&eacute; Visuelle Compl&egrave;te</option>
                             <option value="design">Design Graphique</option>
                             <option value="photo">Photographie Professionnelle</option>
                             <option value="print">Impression Premium</option>
@@ -350,9 +372,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="budget">Budget estimé</label>
+                        <label for="budget">Budget estim&eacute;</label>
                         <select id="budget" name="budget">
-                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="">S&eacute;lectionnez une fourchette</option>
                             <option value="small">Less than $5,000</option>
                             <option value="medium">$5,000 - $15,000</option>
                             <option value="large">$15,000 - $50,000</option>
@@ -362,29 +384,84 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Décrivez votre projet *</label>
+                    <label for="message">D&eacute;crivez votre projet *</label>
                     <textarea id="message" name="message" rows="5" required
                         placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
                 </div>
 
                 <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
-                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                    <p class="form-note">Nous vous r&eacute;pondrons sous 24h ouvr&eacute;es</p>
                 </div>
             </form>
 
-            <!-- Success Message -->
             <div class="success-message" id="success-message">
-                <div class="success-icon">✓</div>
-                <h3>Message envoyé avec succès !</h3>
-                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
-                <button class="btn btn-primary" id="success-close">Fermer</button>
+                <div class="success-icon">&checkmark;</div>
+                <h3>Message envoy&eacute; avec succ&egrave;s !</h3>
+                <p>Merci pour votre int&eacute;r&ecirc;t. Notre &eacute;quipe vous contactera tr&egrave;s prochainement.</p>
+                <button class="btn btn-primary" id="success-close" onclick="closeContactModal()">Fermer</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="modal-overlay" id="login-overlay" onclick="closeLoginModal()"></div>
+        <div class="modal-content login-content">
+            <button class="modal-close" id="login-close" onclick="closeLoginModal()" aria-label="Fermer">&times;</button>
+
+            <div class="modal-header">
+                <div class="login-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 class="modal-title">Espace Client</h2>
+                <p class="modal-subtitle">Connectez-vous pour acc&eacute;der &agrave; vos projets</p>
+            </div>
+
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email *</label>
+                    <input type="email" id="login-email" name="email" required placeholder="votre@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Mot de passe *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="login-password" name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                                <button type="button" class="password-toggle" aria-label="Afficher le mot de passe">
+                                    <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember-me" name="remember">
+                        <span>Se souvenir de moi</span>
+                    </label>
+                    <a href="../forgot-password.html" class="forgot-link">Mot de passe oubli&eacute; ?</a>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Se connecter</button>
+                    <p class="form-note">Pas encore de compte ? <a href="../register.html" class="signup-link">Cr&eacute;er un compte</a></p>
+                </div>
+            </form>
         </div>
     </div>
 
     <script src="../api.js"></script>
     <script src="../script.js"></script>
-</body>
 
+</body>
 </html>

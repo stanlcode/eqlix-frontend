@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Témoignages Clients - EQLIX MEDIA CREATION</title>
-    <meta name="description"
-        content="Découvrez ce que nos clients disent de nous. Témoignages authentiques sur nos services de design, photographie et impression.">
+    <title>T&eacute;moignages Clients - EQLIX MEDIA CREATION</title>
+    <meta name="description" content="Ce que nos clients disent de nous. D&eacute;couvrez les t&eacute;moignages sur nos services cr&eacute;atifs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="modal.css">
+    
 </head>
-
 <body>
+
     <!-- Header Sticky -->
-    <header class="header" id="header">
+<header class="header" id="header">
         <div class="container header-content">
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img">
-                </a>
+                <a href="index.html"><img src="images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img"></a>
             </div>
 
             <nav class="nav" id="nav-menu">
@@ -30,20 +26,21 @@
                     <li class="nav-item dropdown">
                         <a href="index.html#services" class="nav-link">Services</a>
                         <div class="dropdown-menu">
-                            <a href="services/identite.html" class="dropdown-item">Identité Visuelle</a>
+                            <a href="services/identite.html" class="dropdown-item">Identit&eacute; Visuelle</a>
                             <a href="services/photo.html" class="dropdown-item">Photographie</a>
                             <a href="services/design.html" class="dropdown-item">Design Graphique</a>
                             <a href="services/impression.html" class="dropdown-item">Impression</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="testimonials.html" class="nav-link">Témoignages</a></li>
+                    <li class="nav-item"><a href="testimonials.html" class="nav-link">T&eacute;moignages</a></li>
                     <li class="nav-item dropdown">
                         <a href="about.html" class="nav-link">Agence</a>
                         <div class="dropdown-menu">
-                            <a href="index.html#vision" class="dropdown-item">Vision</a>
-                            <a href="index.html#equipe" class="dropdown-item">Équipe</a>
-                            <a href="index.html#equipements" class="dropdown-item">Équipements</a>
+                            <a href="about.html" class="dropdown-item">&Agrave; Propos</a>
+                            <a href="about.html#vision" class="dropdown-item">Vision</a>
+                            <a href="about.html#equipe" class="dropdown-item">&Eacute;quipe</a>
+                            <a href="about.html#equipements" class="dropdown-item">&Eacute;quipements</a>
                         </div>
                     </li>
                 </ul>
@@ -73,7 +70,7 @@
                     </svg>
                     Espace Client
                 </button>
-                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
+                <button class="btn btn-primary" onclick="openContactModal()">D&eacute;marrer un projet</button>
                 <button class="mobile-menu-toggle" id="mobile-toggle">
                     <span></span>
                     <span></span>
@@ -83,15 +80,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+<!-- Hero Section -->
     <section class="testimonials-hero">
         <div class="hero-overlay"></div>
         <div class="container">
-            <h1 class="hero-title">Témoignages de Nos Clients</h1>
-            <p class="hero-subtitle">Découvrez ce que nos clients disent de leur expérience avec EQLIX</p>
+            <h1 class="hero-title">T&eacute;moignages de Nos Clients</h1>
+            <p class="hero-subtitle">D&eacute;couvrez ce que nos clients disent de leur exp&eacute;rience avec EQLIX</p>
         </div>
     </section>
-
     <!-- Statistics Section -->
     <section class="testimonials-stats">
         <div class="container">
@@ -104,36 +100,34 @@
                 <div class="stat-card">
                     <div class="stat-icon">🎯</div>
                     <div class="stat-number" data-target="250">0</div>
-                    <div class="stat-label">Projets Réalisés</div>
+                    <div class="stat-label">Projets R&eacute;alis&eacute;s</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">🤝</div>
                     <div class="stat-number" data-target="120">0</div>
-                    <div class="stat-label">Clients Fidèles</div>
+                    <div class="stat-label">Clients Fid&egrave;les</div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Filters Section -->
     <section class="testimonials-filters">
         <div class="container">
             <div class="filters-wrapper">
                 <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="identite">Identité Visuelle</button>
+                <button class="filter-btn" data-filter="identit&eacute;e">Identit&eacute; Visuelle</button>
                 <button class="filter-btn" data-filter="photo">Photographie</button>
                 <button class="filter-btn" data-filter="design">Design Graphique</button>
                 <button class="filter-btn" data-filter="impression">Impression</button>
             </div>
         </div>
     </section>
-
     <!-- Testimonials Grid -->
     <section class="testimonials-grid-section">
         <div class="container">
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-item" data-category="identite">
+                <div class="testimonial-item" data-category="identit&eacute;e">
                     <div class="testimonial-header">
                         <div class="client-avatar">MD</div>
                         <div class="client-info">
@@ -142,15 +136,14 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"EQLIX a transformé notre identité visuelle. Leur approche stratégique
-                        et leur expertise technique ont dépassé toutes nos attentes. Notre nouvelle image de marque a
-                        augmenté notre visibilité de 300%."</p>
+                    <p class="testimonial-text">"EQLIX a transform&eacute; notre identit&eacute;&eacute; visuelle. Leur approche strat&eacute;gique
+                        et leur expertise technique ont d&eacute;pass&eacute; toutes nos attentes. Notre nouvelle image de marque a
+                        augment&eacute; notre visibilit&eacute; de 300%."</p>
                     <div class="testimonial-meta">
-                        <span class="service-badge identite">Identité Visuelle</span>
+                        <span class="service-badge identit&eacute;e">Identit&eacute; Visuelle</span>
                         <span class="project-date">Janvier 2026</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 2 -->
                 <div class="testimonial-item" data-category="impression">
                     <div class="testimonial-header">
@@ -161,15 +154,14 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Un service impeccable du brief à la livraison. La qualité d'impression
-                        est exceptionnelle et les délais toujours respectés. Nos cartes de visite avec dorure sont
+                    <p class="testimonial-text">"Un service impeccable du brief &agrave; la livraison. La qualit&eacute; d'impression
+                        est exceptionnelle et les d&eacute;lais toujours respect&eacute;s. Nos cartes de visite avec dorure sont
                         devenues notre signature."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge impression">Impression Premium</span>
-                        <span class="project-date">Décembre 2025</span>
+                        <span class="project-date">D&eacute;cembre 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 3 -->
                 <div class="testimonial-item" data-category="photo">
                     <div class="testimonial-header">
@@ -180,14 +172,13 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Leur équipe de photographes est incroyable. Nos shootings produits
-                        n'ont jamais été aussi professionnels. Les photos ont boosté nos ventes en ligne de 45%."</p>
+                    <p class="testimonial-text">"Leur &eacute;quipe de photographes est incroyable. Nos shootings produits
+                        n'ont jamais &eacute;t&eacute; aussi professionnels. Les photos ont boost&eacute; nos ventes en ligne de 45%."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge photo">Photographie</span>
                         <span class="project-date">Novembre 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 4 -->
                 <div class="testimonial-item" data-category="design">
                     <div class="testimonial-header">
@@ -199,90 +190,85 @@
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
                     <p class="testimonial-text">"Le design de notre brochure corporate est tout simplement magnifique.
-                        EQLIX a su capturer l'essence de notre entreprise et la traduire visuellement de manière
+                        EQLIX a su capturer l'essence de notre entreprise et la traduire visuellement de mani&egrave;re
                         impactante."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge design">Design Graphique</span>
                         <span class="project-date">Octobre 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 5 -->
-                <div class="testimonial-item" data-category="identite">
+                <div class="testimonial-item" data-category="identit&eacute;e">
                     <div class="testimonial-header">
                         <div class="client-avatar">CB</div>
                         <div class="client-info">
                             <h3 class="client-name">Camille Bernard</h3>
-                            <p class="client-position">Directrice, Artisan Café</p>
+                            <p class="client-position">Directrice, Artisan Caf&eacute;</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"De la création du logo à la charte graphique complète, EQLIX a été un
-                        partenaire exceptionnel. Notre nouvelle identité reflète parfaitement nos valeurs
+                    <p class="testimonial-text">"De la cr&eacute;ation du logo &agrave; la charte graphique compl&egrave;te, EQLIX a &eacute;t&eacute; un
+                        partenaire exceptionnel. Notre nouvelle identit&eacute;&eacute; refl&egrave;te parfaitement nos valeurs
                         artisanales."</p>
                     <div class="testimonial-meta">
-                        <span class="service-badge identite">Identité Visuelle</span>
+                        <span class="service-badge identit&eacute;e">Identit&eacute; Visuelle</span>
                         <span class="project-date">Septembre 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 6 -->
                 <div class="testimonial-item" data-category="photo">
                     <div class="testimonial-header">
                         <div class="client-avatar">AL</div>
                         <div class="client-info">
-                            <h3 class="client-name">Antoine Lefèvre</h3>
+                            <h3 class="client-name">Antoine Lef&egrave;vre</h3>
                             <p class="client-position">Chef, Restaurant Le Gourmet</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Les photos de nos plats sont sublimes ! Chaque détail est capturé avec
-                        une précision incroyable. Notre menu visuel attire maintenant beaucoup plus de clients."</p>
+                    <p class="testimonial-text">"Les photos de nos plats sont sublimes ! Chaque d&eacute;tail est captur&eacute; avec
+                        une pr&eacute;cision incroyable. Notre menu visuel attire maintenant beaucoup plus de clients."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge photo">Photographie</span>
-                        <span class="project-date">Août 2025</span>
+                        <span class="project-date">Ao&ucirc;t 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 7 -->
                 <div class="testimonial-item" data-category="impression">
                     <div class="testimonial-header">
                         <div class="client-avatar">EM</div>
                         <div class="client-info">
-                            <h3 class="client-name">Émilie Moreau</h3>
+                            <h3 class="client-name">&Eacute;milie Moreau</h3>
                             <p class="client-position">Responsable Communication, FinanceFirst</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"La qualité d'impression de nos rapports annuels est exceptionnelle. Le
-                        papier texturé et les finitions premium donnent une image très professionnelle à notre
+                    <p class="testimonial-text">"La qualit&eacute; d'impression de nos rapports annuels est exceptionnelle. Le
+                        papier textur&eacute; et les finitions premium donnent une image tr&egrave;s professionnelle &agrave; notre
                         entreprise."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge impression">Impression Premium</span>
                         <span class="project-date">Juillet 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 8 -->
                 <div class="testimonial-item" data-category="design">
                     <div class="testimonial-header">
                         <div class="client-avatar">TG</div>
                         <div class="client-info">
                             <h3 class="client-name">Thomas Girard</h3>
-                            <p class="client-position">Directeur Créatif, Urban Style</p>
+                            <p class="client-position">Directeur Cr&eacute;atif, Urban Style</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Collaboration fluide et résultats au-delà de nos espérances. Le design
-                        de notre catalogue printemps-été a reçu des retours extraordinaires de nos partenaires."</p>
+                    <p class="testimonial-text">"Collaboration fluide et r&eacute;sultats au-del&agrave; de nos esp&eacute;rances. Le design
+                        de notre catalogue printemps-&eacute;t&eacute; a re&ccedil;u des retours extraordinaires de nos partenaires."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge design">Design Graphique</span>
                         <span class="project-date">Juin 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 9 -->
-                <div class="testimonial-item" data-category="identite">
+                <div class="testimonial-item" data-category="identit&eacute;e">
                     <div class="testimonial-header">
                         <div class="client-avatar">NP</div>
                         <div class="client-info">
@@ -291,14 +277,13 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"EQLIX a créé une identité visuelle apaisante et moderne qui correspond
-                        parfaitement à notre concept de bien-être. Nos clients adorent notre nouveau look."</p>
+                    <p class="testimonial-text">"EQLIX a cr&eacute;&eacute; une identit&eacute;&eacute; visuelle apaisante et moderne qui correspond
+                        parfaitement &agrave; notre concept de bien-&ecirc;tre. Nos clients adorent notre nouveau look."</p>
                     <div class="testimonial-meta">
-                        <span class="service-badge identite">Identité Visuelle</span>
+                        <span class="service-badge identit&eacute;e">Identit&eacute; Visuelle</span>
                         <span class="project-date">Mai 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 10 -->
                 <div class="testimonial-item" data-category="photo">
                     <div class="testimonial-header">
@@ -309,33 +294,31 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Les photos corporate de notre équipe sont professionnelles et
-                        authentiques. Elles humanisent notre marque tech et créent une vraie connexion avec nos
+                    <p class="testimonial-text">"Les photos corporate de notre &eacute;quipe sont professionnelles et
+                        authentiques. Elles humanisent notre marque tech et cr&eacute;ent une vraie connexion avec nos
                         clients."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge photo">Photographie</span>
                         <span class="project-date">Avril 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 11 -->
                 <div class="testimonial-item" data-category="impression">
                     <div class="testimonial-header">
                         <div class="client-avatar">LC</div>
                         <div class="client-info">
                             <h3 class="client-name">Laura Chevalier</h3>
-                            <p class="client-position">Organisatrice d'Événements, EventPro</p>
+                            <p class="client-position">Organisatrice d'&Eacute;v&eacute;nements, EventPro</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Nos invitations d'événements imprimées par EQLIX font toujours
-                        sensation. La découpe laser et l'embossage ajoutent une touche de luxe incomparable."</p>
+                    <p class="testimonial-text">"Nos invitations d'&eacute;v&eacute;nements imprim&eacute;es par EQLIX font toujours
+                        sensation. La d&eacute;coupe laser et l'embossage ajoutent une touche de luxe incomparable."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge impression">Impression Premium</span>
                         <span class="project-date">Mars 2025</span>
                     </div>
                 </div>
-
                 <!-- Testimonial 12 -->
                 <div class="testimonial-item" data-category="design">
                     <div class="testimonial-header">
@@ -346,35 +329,33 @@
                         </div>
                     </div>
                     <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Le design de notre présentation investisseurs a été déterminant dans
-                        notre levée de fonds. EQLIX sait comment rendre des données complexes visuellement
+                    <p class="testimonial-text">"Le design de notre pr&eacute;sentation investisseurs a &eacute;t&eacute; d&eacute;terminant dans
+                        notre lev&eacute;e de fonds. EQLIX sait comment rendre des donn&eacute;es complexes visuellement
                         captivantes."</p>
                     <div class="testimonial-meta">
                         <span class="service-badge design">Design Graphique</span>
-                        <span class="project-date">Février 2025</span>
+                        <span class="project-date">F&eacute;vrier 2025</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="testimonials-cta">
         <div class="container">
             <h2>Rejoignez Nos Clients Satisfaits</h2>
-            <p>Prêt à transformer votre image de marque ?</p>
-            <button class="btn btn-primary btn-large" onclick="openContactModal()">Démarrer Votre Projet</button>
+            <p>Pr&ecirc;t &agrave; transformer votre image de marque ?</p>
+            <button class="btn btn-primary btn-large" onclick="openContactModal()">D&eacute;marrer Votre Projet</button>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services/identite.html">Identité Visuelle</a></li>
+                        <li><a href="services/identite.html">Identit&eacute; Visuelle</a></li>
                         <li><a href="services/photo.html">Photographie</a></li>
                         <li><a href="services/design.html">Design Graphique</a></li>
                         <li><a href="services/impression.html">Impression Premium</a></li>
@@ -384,20 +365,20 @@
                 <div class="footer-column">
                     <h4>Agence</h4>
                     <ul>
-                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="about.html">&Agrave; Propos</a></li>
                         <li><a href="about.html#vision">Notre Vision</a></li>
-                        <li><a href="about.html#equipe">L'Équipe</a></li>
-                        <li><a href="about.html#equipements">Nos Équipements</a></li>
+                        <li><a href="about.html#equipe">L'&Eacute;quipe</a></li>
+                        <li><a href="about.html#equipements">Nos &Eacute;quipements</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Légal</h4>
+                    <h4>L&eacute;gal</h4>
                     <ul>
-                        <li><a href="legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="legal/mentions-legales.html">Mentions L&eacute;gales</a></li>
                         <li><a href="legal/cgv.html">CGV</a></li>
-                        <li><a href="legal/confidentialite.html">Confidentialité</a></li>
+                        <li><a href="legal/confidentialite.html">Confidentialit&eacute;</a></li>
                         <li><a href="legal/cookies.html">Cookies</a></li>
                     </ul>
                 </div>
@@ -408,7 +389,7 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="pricing.html">Tarifs</a></li>
-                        <li><a href="testimonials.html">Témoignages</a></li>
+                        <li><a href="testimonials.html">T&eacute;moignages</a></li>
                     </ul>
                 </div>
 
@@ -418,13 +399,15 @@
                         <li>contact@eqlix.com</li>
                         <li>+509 31 06 0634</li>
                         <li>+509 40 05 5553</li>
-                        <li>11, Rue Chavanne Prolongée</li>
-                        <li>Diègue, PV, Haïti</li>
+                        <li>11, Rue Chavanne Prolong&eacute;e</li>
+                        <li>Di&egrave;gue, PV, Ha&iuml;ti</li>
                     </ul>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Behance">BE</a>
+                        <a href="https://instagram.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+                        <a href="https://linkedin.com/company/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+                        <a href="https://facebook.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
+                        <a href="https://twitter.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+                        <a href="https://behance.net/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Behance">BE</a>
                     </div>
                 </div>
             </div>
@@ -439,21 +422,21 @@
                     </div>
                 </div>
                 <div class="footer-copy">
-                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits r&eacute;serv&eacute;s.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Contact Modal (same as index.html) -->
+    <!-- Contact Modal -->
     <div class="contact-modal" id="contact-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-overlay" id="modal-overlay" onclick="closeContactModal()"></div>
         <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+            <button class="modal-close" id="modal-close" onclick="closeContactModal()" aria-label="Fermer">&times;</button>
 
             <div class="modal-header">
-                <h2 class="modal-title">Démarrons votre projet</h2>
-                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+                <h2 class="modal-title">D&eacute;marrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en r&eacute;alit&eacute;</p>
             </div>
 
             <form class="contact-form" id="contact-form">
@@ -471,8 +454,8 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                        <label for="phone">T&eacute;l&eacute;phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+509 31 06 06 34">
                     </div>
 
                     <div class="form-group">
@@ -485,8 +468,8 @@
                     <div class="form-group">
                         <label for="project-type">Type de projet *</label>
                         <select id="project-type" name="project-type" required>
-                            <option value="">Sélectionnez un type</option>
-                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="">S&eacute;lectionnez un type</option>
+                            <option value="branding">Identit&eacute; Visuelle Compl&egrave;te</option>
                             <option value="design">Design Graphique</option>
                             <option value="photo">Photographie Professionnelle</option>
                             <option value="print">Impression Premium</option>
@@ -496,9 +479,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="budget">Budget estimé</label>
+                        <label for="budget">Budget estim&eacute;</label>
                         <select id="budget" name="budget">
-                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="">S&eacute;lectionnez une fourchette</option>
                             <option value="small">Less than $5,000</option>
                             <option value="medium">$5,000 - $15,000</option>
                             <option value="large">$15,000 - $50,000</option>
@@ -508,32 +491,31 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Décrivez votre projet *</label>
+                    <label for="message">D&eacute;crivez votre projet *</label>
                     <textarea id="message" name="message" rows="5" required
                         placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
                 </div>
 
                 <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
-                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                    <p class="form-note">Nous vous r&eacute;pondrons sous 24h ouvr&eacute;es</p>
                 </div>
             </form>
 
-            <!-- Success Message -->
             <div class="success-message" id="success-message">
-                <div class="success-icon">✓</div>
-                <h3>Message envoyé avec succès !</h3>
-                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
-                <button class="btn btn-primary" id="success-close">Fermer</button>
+                <div class="success-icon">&checkmark;</div>
+                <h3>Message envoy&eacute; avec succ&egrave;s !</h3>
+                <p>Merci pour votre int&eacute;r&ecirc;t. Notre &eacute;quipe vous contactera tr&egrave;s prochainement.</p>
+                <button class="btn btn-primary" id="success-close" onclick="closeContactModal()">Fermer</button>
             </div>
         </div>
     </div>
 
     <!-- Login Modal -->
     <div class="login-modal" id="login-modal">
-        <div class="modal-overlay" id="login-overlay"></div>
+        <div class="modal-overlay" id="login-overlay" onclick="closeLoginModal()"></div>
         <div class="modal-content login-content">
-            <button class="modal-close" id="login-close" aria-label="Fermer">×</button>
+            <button class="modal-close" id="login-close" onclick="closeLoginModal()" aria-label="Fermer">&times;</button>
 
             <div class="modal-header">
                 <div class="login-icon">
@@ -543,7 +525,7 @@
                     </svg>
                 </div>
                 <h2 class="modal-title">Espace Client</h2>
-                <p class="modal-subtitle">Connectez-vous pour accéder à vos projets</p>
+                <p class="modal-subtitle">Connectez-vous pour acc&eacute;der &agrave; vos projets</p>
             </div>
 
             <form class="login-form" id="login-form">
@@ -555,22 +537,17 @@
                 <div class="form-group">
                     <label for="login-password">Mot de passe *</label>
                     <div class="password-input-wrapper">
-                        <input type="password" id="login-password" name="password" required placeholder="••••••••">
-                        <button type="button" class="password-toggle" id="password-toggle"
-                            aria-label="Afficher le mot de passe">
-                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                            <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" style="display: none;">
-                                <path
-                                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
-                                </path>
-                                <line x1="1" y1="1" x2="23" y2="23"></line>
-                            </svg>
-                        </button>
+                        <input type="password" id="login-password" name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                                <button type="button" class="password-toggle" aria-label="Afficher le mot de passe">
+                                    <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                </button>
                     </div>
                 </div>
 
@@ -579,29 +556,19 @@
                         <input type="checkbox" id="remember-me" name="remember">
                         <span>Se souvenir de moi</span>
                     </label>
-                    <a href="#forgot-password" class="forgot-link">Mot de passe oublié ?</a>
+                    <a href="forgot-password.html" class="forgot-link">Mot de passe oubli&eacute; ?</a>
                 </div>
 
                 <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-large">Se connecter</button>
-                    <p class="form-note">Pas encore de compte ? <a href="#signup" class="signup-link">Créer un
-                            compte</a></p>
+                    <p class="form-note">Pas encore de compte ? <a href="register.html" class="signup-link">Cr&eacute;er un compte</a></p>
                 </div>
             </form>
-
-            <!-- Login Success Message -->
-            <div class="success-message" id="login-success-message">
-                <div class="success-icon">✓</div>
-                <h3>Connexion réussie !</h3>
-                <p>Bienvenue dans votre espace client.</p>
-                <button class="btn btn-primary" id="login-success-close">Accéder au tableau de bord</button>
-            </div>
         </div>
     </div>
 
     <script src="api.js"></script>
     <script src="script.js"></script>
-    <script src="testimonials.js"></script>
-</body>
 
+</body>
 </html>

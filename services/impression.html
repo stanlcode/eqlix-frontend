@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +11,40 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body class="service-page">
-    <!-- Header -->
-    <header class="header" id="header">
+
+    <!-- Header Sticky -->
+<header class="header" id="header">
         <div class="container header-content">
-            <div class="logo"><a href="../index.html"><img src="../images/logo.png" alt="EQLIX MEDIA CREATION"
-                        class="logo-img"></a></div>
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="EQLIX MEDIA CREATION" class="logo-img"></a>
+            </div>
+
             <nav class="nav" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item dropdown"><a href="../index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../index.html#services" class="nav-link">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="../services/identite.html" class="dropdown-item">Identit&eacute; Visuelle</a>
+                            <a href="../services/photo.html" class="dropdown-item">Photographie</a>
+                            <a href="../services/design.html" class="dropdown-item">Design Graphique</a>
+                            <a href="../services/impression.html" class="dropdown-item">Impression</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item dropdown"><a href="../about.html" class="nav-link">Agence</a></li>
+                    <li class="nav-item"><a href="../testimonials.html" class="nav-link">T&eacute;moignages</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../about.html" class="nav-link">Agence</a>
+                        <div class="dropdown-menu">
+                            <a href="../about.html" class="dropdown-item">&Agrave; Propos</a>
+                            <a href="../about.html#vision" class="dropdown-item">Vision</a>
+                            <a href="../about.html#equipe" class="dropdown-item">&Eacute;quipe</a>
+                            <a href="../about.html#equipements" class="dropdown-item">&Eacute;quipements</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
+
             <div class="header-actions">
                 <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -43,43 +62,50 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="fr">FR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button class="btn btn-primary" onclick="openContactModal()">Démarrer un projet</button>
-                <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+                <button class="btn btn-outline btn-client" id="client-space-btn" onclick="openLoginModal()">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Espace Client
+                </button>
+                <button class="btn btn-primary" onclick="openContactModal()">D&eacute;marrer un projet</button>
+                <button class="mobile-menu-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
+<!-- Header -->
+    
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="container">
             <h1 class="section-title">Impression Premium</h1>
-            <p class="section-subtitle">Papier noble, finitions luxueuses, impression haute définition pour des supports
+            <p class="section-subtitle">Papier noble, finitions luxueuses, impression haute d&eacute;finition pour des supports
                 qui impressionnent.</p>
             <button class="btn btn-primary" onclick="openContactModal()">Demander un devis</button>
         </div>
     </section>
-
     <!-- Overview Section -->
     <section class="service-overview">
         <div class="container">
             <h2>L'excellence de l'impression haut de gamme</h2>
-            <p>L'impression premium, c'est l'art de transformer vos créations digitales en supports physiques
-                exceptionnels. Chaque détail compte : le choix du papier, la précision des couleurs, la qualité des
+            <p>L'impression premium, c'est l'art de transformer vos cr&eacute;ations digitales en supports physiques
+                exceptionnels. Chaque d&eacute;tail compte : le choix du papier, la pr&eacute;cision des couleurs, la qualit&eacute; des
                 finitions.</p>
-            <p>Chez EQLIX, nous maîtrisons toutes les techniques d'impression, de l'offset au numérique, en passant par
-                les finitions spéciales comme la dorure, le vernis sélectif et le gaufrage. Nous travaillons avec les
-                meilleurs fournisseurs de papiers nobles et utilisons des presses de dernière génération pour garantir
+            <p>Chez EQLIX, nous ma&icirc;trisons toutes les techniques d'impression, de l'offset au num&eacute;rique, en passant par
+                les finitions sp&eacute;ciales comme la dorure, le vernis s&eacute;lectif et le gaufrage. Nous travaillons avec les
+                meilleurs fournisseurs de papiers nobles et utilisons des presses de derni&egrave;re g&eacute;n&eacute;ration pour garantir
                 un rendu impeccable à chaque tirage.</p>
             <div class="highlight-box">
-                <p>✨ Les supports imprimés premium augmentent la perception de valeur de votre marque de 60%.</p>
+                <p>✨ Les supports imprim&eacute;s premium augmentent la perception de valeur de votre marque de 60%.</p>
             </div>
         </div>
     </section>
-
     <!-- Features Section -->
     <section class="service-features">
         <div class="container">
@@ -94,9 +120,8 @@
                         </svg>
                     </div>
                     <h3>Impression Offset</h3>
-                    <p>Pour les grands tirages, qualité professionnelle et rendu des couleurs exceptionnel.</p>
+                    <p>Pour les grands tirages, qualit&eacute; professionnelle et rendu des couleurs exceptionnel.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -104,10 +129,9 @@
                             <polyline points="17 2 12 7 7 2" />
                         </svg>
                     </div>
-                    <h3>Impression Numérique</h3>
-                    <p>Petits tirages et personnalisation avec une qualité HD et des délais rapides.</p>
+                    <h3>Impression Num&eacute;rique</h3>
+                    <p>Petits tirages et personnalisation avec une qualit&eacute; HD et des d&eacute;lais rapides.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -116,9 +140,8 @@
                         </svg>
                     </div>
                     <h3>Grand Format</h3>
-                    <p>Affiches, banderoles, kakémonos et signalétique pour vos événements et points de vente.</p>
+                    <p>Affiches, banderoles, kak&eacute;monos et signal&eacute;tique pour vos &eacute;v&eacute;nements et points de vente.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -129,7 +152,6 @@
                     <h3>Dorure & Embossage</h3>
                     <p>Finitions luxueuses en or, argent ou couleur pour un effet premium garanti.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -138,9 +160,8 @@
                         </svg>
                     </div>
                     <h3>Papiers Nobles</h3>
-                    <p>Large sélection de papiers texturés, couchés, recyclés et papiers de création.</p>
+                    <p>Large s&eacute;lection de papiers textur&eacute;s, couch&eacute;s, recycl&eacute;s et papiers de cr&eacute;ation.</p>
                 </div>
-
                 <div class="feature-item">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -148,13 +169,12 @@
                             <path d="M12 6v6l4 2" />
                         </svg>
                     </div>
-                    <h3>Finitions Spéciales</h3>
-                    <p>Vernis sélectif, pelliculage mat ou brillant, découpe laser et pliage complexe.</p>
+                    <h3>Finitions Sp&eacute;ciales</h3>
+                    <p>Vernis s&eacute;lectif, pelliculage mat ou brillant, d&eacute;coupe laser et pliage complexe.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Process Section -->
     <section class="service-process">
         <div class="container">
@@ -162,37 +182,32 @@
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Conseil Matériaux</h3>
-                    <p>Sélection du papier, des finitions et de la technique d'impression adaptés à votre projet.</p>
+                    <h3>Conseil Mat&eacute;riaux</h3>
+                    <p>S&eacute;lection du papier, des finitions et de la technique d'impression adapt&eacute;s à votre projet.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>BAT & Validation</h3>
-                    <p>Vérification du Bon À Tirer pour garantir la conformité avant production.</p>
+                    <p>V&eacute;rification du Bon À Tirer pour garantir la conformit&eacute; avant production.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Production</h3>
-                    <p>Impression sur nos presses professionnelles avec contrôle qualité constant.</p>
+                    <p>Impression sur nos presses professionnelles avec contr&ocirc;le qualit&eacute; constant.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Finitions</h3>
-                    <p>Application des finitions spéciales, façonnage et contrôle qualité final.</p>
+                    <p>Application des finitions sp&eacute;ciales, fa&ccedil;onnage et contr&ocirc;le qualit&eacute; final.</p>
                 </div>
-
                 <div class="process-step">
                     <div class="step-number">5</div>
                     <h3>Livraison</h3>
-                    <p>Emballage soigné et livraison sécurisée de vos supports imprimés.</p>
+                    <p>Emballage soign&eacute; et livraison s&eacute;curis&eacute;e de vos supports imprim&eacute;s.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Choose Us Section -->
     <section class="service-why">
         <div class="container">
@@ -200,30 +215,27 @@
             <div class="why-grid">
                 <div class="why-item">
                     <div class="why-icon">🏆</div>
-                    <h3>Qualité Premium</h3>
-                    <p>Matériaux nobles et techniques d'impression de pointe pour un rendu exceptionnel.</p>
+                    <h3>Qualit&eacute; Premium</h3>
+                    <p>Mat&eacute;riaux nobles et techniques d'impression de pointe pour un rendu exceptionnel.</p>
                 </div>
-
                 <div class="why-item">
                     <div class="why-icon">⚙️</div>
                     <h3>Expertise Technique</h3>
-                    <p>Maîtrise de toutes les techniques d'impression et finitions spéciales.</p>
+                    <p>Ma&icirc;trise de toutes les techniques d'impression et finitions sp&eacute;ciales.</p>
                 </div>
-
                 <div class="why-item">
                     <div class="why-icon">📦</div>
                     <h3>Service Complet</h3>
-                    <p>De la conception à la livraison, nous gérons chaque étape de votre projet.</p>
+                    <p>De la conception à la livraison, nous g&eacute;rons chaque &eacute;tape de votre projet.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="service-cta">
         <div class="container">
-            <h2>Prêt à imprimer l'excellence ?</h2>
-            <p>Transformez vos créations en supports imprimés qui marquent les esprits.</p>
+            <h2>Pr&ecirc;t à imprimer l'excellence ?</h2>
+            <p>Transformez vos cr&eacute;ations en supports imprim&eacute;s qui marquent les esprits.</p>
             <button class="btn" onclick="openContactModal()">Demander un devis</button>
         </div>
     </section>
@@ -234,30 +246,30 @@
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="identite.html">Identit� Visuelle</a></li>
-                        <li><a href="photo.html">Photographie</a></li>
-                        <li><a href="design.html">Design Graphique</a></li>
-                        <li><a href="impression.html">Impression Premium</a></li>
+                        <li><a href="../services/identite.html">Identit&eacute; Visuelle</a></li>
+                        <li><a href="../services/photo.html">Photographie</a></li>
+                        <li><a href="../services/design.html">Design Graphique</a></li>
+                        <li><a href="../services/impression.html">Impression Premium</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h4>Agence</h4>
                     <ul>
-                        <li><a href="../about.html">� Propos</a></li>
+                        <li><a href="../about.html">&Agrave; Propos</a></li>
                         <li><a href="../about.html#vision">Notre Vision</a></li>
-                        <li><a href="../about.html#equipe">L'�quipe</a></li>
-                        <li><a href="../about.html#equipements">Nos �quipements</a></li>
+                        <li><a href="../about.html#equipe">L'&Eacute;quipe</a></li>
+                        <li><a href="../about.html#equipements">Nos &Eacute;quipements</a></li>
                         <li><a href="../portfolio.html">Portfolio</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>L�gal</h4>
+                    <h4>L&eacute;gal</h4>
                     <ul>
-                        <li><a href="../legal/mentions-legales.html">Mentions L�gales</a></li>
+                        <li><a href="../legal/mentions-legales.html">Mentions L&eacute;gales</a></li>
                         <li><a href="../legal/cgv.html">CGV</a></li>
-                        <li><a href="../legal/confidentialite.html">Confidentialit�</a></li>
+                        <li><a href="../legal/confidentialite.html">Confidentialit&eacute;</a></li>
                         <li><a href="../legal/cookies.html">Cookies</a></li>
                     </ul>
                 </div>
@@ -268,7 +280,7 @@
                         <li><a href="../faq.html">FAQ</a></li>
                         <li><a href="../contact.html">Contact</a></li>
                         <li><a href="../pricing.html">Tarifs</a></li>
-                        <li><a href="../testimonials.html">T�moignages</a></li>
+                        <li><a href="../testimonials.html">T&eacute;moignages</a></li>
                     </ul>
                 </div>
 
@@ -278,23 +290,30 @@
                         <li>contact@eqlix.com</li>
                         <li>+509 31 06 0634</li>
                         <li>+509 40 05 5553</li>
-                        <li>11, Rue Chavanne Prolong�e</li>
-                        <li>Di�gue, PV, Ha�ti</li>
+                        <li>11, Rue Chavanne Prolong&eacute;e</li>
+                        <li>Di&egrave;gue, PV, Ha&iuml;ti</li>
                     </ul>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Behance">BE</a>
+                        <a href="https://instagram.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+                        <a href="https://linkedin.com/company/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+                        <a href="https://facebook.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
+                        <a href="https://twitter.com/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+                        <a href="https://behance.net/eqlixmediacretion" target="_blank" rel="noopener noreferrer" aria-label="Behance">BE</a>
                     </div>
                 </div>
             </div>
-<div class="footer-bottom">
-                <div class="footer-partners"><span>Partenaires:</span>
-                    <div class="partner-logos"><span class="partner">Adobe</span><span
-                            class="partner">Pantone</span><span class="partner">Canon</span></div>
+
+            <div class="footer-bottom">
+                <div class="footer-partners">
+                    <span>Partenaires:</span>
+                    <div class="partner-logos">
+                        <span class="partner">Adobe</span>
+                        <span class="partner">Pantone</span>
+                        <span class="partner">Canon</span>
+                    </div>
                 </div>
                 <div class="footer-copy">
-                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits réservés.</p>
+                    <p>&copy; 2026 EQLIX MEDIA CREATION. Tous droits r&eacute;serv&eacute;s.</p>
                 </div>
             </div>
         </div>
@@ -302,13 +321,13 @@
 
     <!-- Contact Modal -->
     <div class="contact-modal" id="contact-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-overlay" id="modal-overlay" onclick="closeContactModal()"></div>
         <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+            <button class="modal-close" id="modal-close" onclick="closeContactModal()" aria-label="Fermer">&times;</button>
 
             <div class="modal-header">
-                <h2 class="modal-title">Démarrons votre projet</h2>
-                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en réalité</p>
+                <h2 class="modal-title">D&eacute;marrons votre projet</h2>
+                <p class="modal-subtitle">Parlez-nous de votre vision et nous la transformerons en r&eacute;alit&eacute;</p>
             </div>
 
             <form class="contact-form" id="contact-form">
@@ -326,8 +345,8 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                        <label for="phone">T&eacute;l&eacute;phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+509 31 06 06 34">
                     </div>
 
                     <div class="form-group">
@@ -340,8 +359,8 @@
                     <div class="form-group">
                         <label for="project-type">Type de projet *</label>
                         <select id="project-type" name="project-type" required>
-                            <option value="">Sélectionnez un type</option>
-                            <option value="branding">Identité Visuelle Complète</option>
+                            <option value="">S&eacute;lectionnez un type</option>
+                            <option value="branding">Identit&eacute; Visuelle Compl&egrave;te</option>
                             <option value="design">Design Graphique</option>
                             <option value="photo">Photographie Professionnelle</option>
                             <option value="print">Impression Premium</option>
@@ -351,9 +370,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="budget">Budget estimé</label>
+                        <label for="budget">Budget estim&eacute;</label>
                         <select id="budget" name="budget">
-                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="">S&eacute;lectionnez une fourchette</option>
                             <option value="small">Less than $5,000</option>
                             <option value="medium">$5,000 - $15,000</option>
                             <option value="large">$15,000 - $50,000</option>
@@ -363,28 +382,84 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Décrivez votre projet *</label>
+                    <label for="message">D&eacute;crivez votre projet *</label>
                     <textarea id="message" name="message" rows="5" required
                         placeholder="Parlez-nous de votre vision, vos objectifs et vos attentes..."></textarea>
                 </div>
 
                 <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-large">Envoyer la demande</button>
-                    <p class="form-note">Nous vous répondrons sous 24h ouvrées</p>
+                    <p class="form-note">Nous vous r&eacute;pondrons sous 24h ouvr&eacute;es</p>
                 </div>
             </form>
 
-            <!-- Success Message -->
             <div class="success-message" id="success-message">
-                <div class="success-icon">✓</div>
-                <h3>Message envoyé avec succès !</h3>
-                <p>Merci pour votre intérêt. Notre équipe vous contactera très prochainement.</p>
-                <button class="btn btn-primary" id="success-close">Fermer</button>
+                <div class="success-icon">&checkmark;</div>
+                <h3>Message envoy&eacute; avec succ&egrave;s !</h3>
+                <p>Merci pour votre int&eacute;r&ecirc;t. Notre &eacute;quipe vous contactera tr&egrave;s prochainement.</p>
+                <button class="btn btn-primary" id="success-close" onclick="closeContactModal()">Fermer</button>
             </div>
         </div>
     </div>
 
-    <script src="../script.js"></script>
-</body>
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="modal-overlay" id="login-overlay" onclick="closeLoginModal()"></div>
+        <div class="modal-content login-content">
+            <button class="modal-close" id="login-close" onclick="closeLoginModal()" aria-label="Fermer">&times;</button>
 
+            <div class="modal-header">
+                <div class="login-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 class="modal-title">Espace Client</h2>
+                <p class="modal-subtitle">Connectez-vous pour acc&eacute;der &agrave; vos projets</p>
+            </div>
+
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email *</label>
+                    <input type="email" id="login-email" name="email" required placeholder="votre@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Mot de passe *</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="login-password" name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                                <button type="button" class="password-toggle" aria-label="Afficher le mot de passe">
+                                    <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember-me" name="remember">
+                        <span>Se souvenir de moi</span>
+                    </label>
+                    <a href="../forgot-password.html" class="forgot-link">Mot de passe oubli&eacute; ?</a>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-large">Se connecter</button>
+                    <p class="form-note">Pas encore de compte ? <a href="../register.html" class="signup-link">Cr&eacute;er un compte</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../api.js"></script>
+    <script src="../script.js"></script>
+
+</body>
 </html>
